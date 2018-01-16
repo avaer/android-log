@@ -7,20 +7,8 @@
     "nan": "^2.6.2",
     "node-gyp-build": "^3.2.0"
   },
-  "devDependencies": {
-    "prebuildify": "^2.4.0",
-    "request": "^2.81.0",
-    "tape": "^4.6.3",
-    "tar-fs": "^1.15.3",
-    "travis-logs": "^2.2.3"
-  },
   "scripts": {
-    "install": "node-gyp-build",
-    "test": "tape test.js && node release.js",
-    "prebuild": "prebuildify --all --strip"
-  },
-  "bin": {
-    "tmp-release": "./release.js"
+    "install": "node-gyp-build"
   },
   "repository": {
     "type": "git",
