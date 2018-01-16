@@ -1,1 +1,1 @@
-require('.').log('hello world');
+require('.').log('hello', 'world');
