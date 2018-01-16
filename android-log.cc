@@ -4,7 +4,7 @@
 
 using namespace v8;
 
-NAN_METHOD(Print) {
+NAN_METHOD(Log) {
   size_t numArgs = info.Length();
   if (numArgs == 0) {
     __android_log_print(ANDROID_LOG_INFO, "node", "");
@@ -97,7 +97,7 @@ NAN_METHOD(Print) {
 }
 
 NAN_MODULE_INIT(InitAll) {
-  Nan::Set(target, Nan::New<String>("print").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(Print)).ToLocalChecked());
+  Nan::Set(target, Nan::New<String>("log").ToLocalChecked(), Nan::GetFunction(Nan::New<FunctionTemplate>(Log)).ToLocalChecked());
 }
 
 NODE_MODULE(a_native_module, InitAll)

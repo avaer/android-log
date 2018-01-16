@@ -1,3 +1,1 @@
-var example = require('./')
-
-example('hello world')
+require('.').log('hello world');
